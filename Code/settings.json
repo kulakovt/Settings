@@ -1,0 +1,22 @@
+{
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.renderWhitespace": "all",
+    "editor.codeLens": false,
+    "terminal.integrated.shell.windows": "C:\\Windows\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.rendererType": "dom",
+    "powershell.codeFormatting.preset": "Allman",
+    "powershell.codeFormatting.useCorrectCasing": true,
+    "powershell.integratedConsole.focusConsoleOnExecute": false,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "extensions.ignoreRecommendations": false,
+    "remote.containers.workspaceMountConsistency": "consistent",
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "http.proxyStrictSSL": false,
+    // "window.zoomLevel": 1,
+    // "editor.fontSize": 22
+}
