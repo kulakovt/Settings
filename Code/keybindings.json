@@ -1,0 +1,57 @@
+// In any case, add the extension «Visual Studio Keymap»
+
+// Place your key bindings in this file to overwrite the defaults
+[
+    // ReSharper Tests: Run all tests from soulution
+    {
+        "key": "ctrl+u ctrl+l",
+        "command": "workbench.action.tasks.test"
+    },
+    // ReSharper Tests: Repeat previous run
+    {
+        "key": "ctrl+u ctrl+u",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Test Current File"
+    },
+    {
+        "key": "ctrl+alt+shift+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+shift+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // Copy from https://github.com/Microsoft/vscode-resharper-keybindings/blob/master/package.json
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+w",
+        "mac": "cmd+w",
+        "command": "editor.action.smartSelect.grow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "mac": "cmd+shift+w",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    // Copy from https://github.com/k--kato/vscode-intellij-idea-keybindings/blob/master/package.json
+    {
+        "key": "alt+enter",
+        "mac": "alt+enter",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+
+    // PowerShell
+    {
+        "key": "f5",
+        "command": "workbench.action.terminal.runActiveFile"
+    }
+]

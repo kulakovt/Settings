@@ -1,2 +1,4 @@
-# Settings
-My settings for various programs
+# Настройки
+
+- [Visual Studio Code](Code)
+
