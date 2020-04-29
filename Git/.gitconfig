@@ -1,0 +1,77 @@
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+
+[user]
+    name = Anatoly Kulakov
+    email = anatoly.kulakov@outlook.com
+
+[alias]
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    clear = clean -d -x #-f
+    amend = commit --amend --no-edit --date=now
+    reword = commit --amend
+    # return last commit to workbanch
+    unci = reset --soft --mixed HEAD~1
+    sth = stash save --include-untracked
+    usth = stash pop
+    # [GitFlow] (https://github.com/nvie/gitflow) for Stash
+    # attach = git branch -u origin/feature/style
+    start  = !sh -c 'git checkout master && git pull origin && git checkout -b $0 master && git push --set-upstream origin $0:feature/$0'
+    finish = !sh -c 'git checkout master && git pull origin && git branch -D $0 && git branch'
+    steal  = !sh -c 'git checkout master && git pull origin && git checkout -b $0 origin/feature/$0'
+    # cmp = !sh -c 'git difftool $0 $1 --dir-diff'
+    dt = difftool --dir-diff
+    mt = mergetool
+    # resolve ignore reason
+    # git check-ignore --verbose build/TestResultInfluxer.ps1
+
+[core]
+    autocrlf = false
+    excludesfile = T:\\proj\\Git\\CSharp.gitignore
+    editor = notepad
+
+[diff]
+    tool = bc
+
+[difftool]
+    prompt = false
+
+[difftool "bc"]
+    cmd = \"D:/Apps/Beyond Compare 4/BComp.exe\" \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = true
+
+[merge]
+    tool = bc
+
+[mergetool "bc"]
+    cmd = \"D:/Apps/Beyond Compare 4/BComp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+    trustExitCode = true
+    keepBackup = false
+
+[mergetool "vsdiffmerge"]
+    cmd = \"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/vsDiffMerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
+    trustExitCode = true
+    keepBackup = false
+
+[fetch]
+    prune = true
+
+[push]
+    default = upstream
+    followTags = true
+
+[credential]
+    helper = wincred
+
+[http "https://github.com"]
+    sslVerify = false
+    proxy = http://10.161.80.50:8081
+    
+[format]
+    commitMessageColumns = 72
