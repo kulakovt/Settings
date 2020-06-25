@@ -28,8 +28,12 @@
     # cmp = !sh -c 'git difftool $0 $1 --dir-diff'
     dt = difftool --dir-diff
     mt = mergetool
-    # resolve ignore reason
+
+    ### Useful commands ##
+    # Resolve ignore reason:
     # git check-ignore --verbose build/TestResultInfluxer.ps1
+    # List references in a remote repository
+    # git ls-remote
 
 [core]
     autocrlf = false
